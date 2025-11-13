@@ -40,7 +40,7 @@ public:
     auto fq_topic = this->get_node_topics_interface()->resolve_topic_name(
         "image_raw/compressed");
 
-    while (this->count_publishers("image_raw/compressed") == 0) {
+    while (this->count_publishers(fq_topic) == 0) {
       if (!rclcpp::ok()) {
         RCLCPP_ERROR(this->get_logger(),
                      "Interrupted while waiting for the publisher. Exiting.");
