@@ -1,2 +1,11 @@
+# The timeout in seconds to wait for the next camera still. Default is 2.0 seconds if set to 0.0.
+float64 timeout
 ---
-sensor_msgs/CompressedImage photo
+# Whether the request was successful.
+bool success
+
+# If not successful, provide a reason.
+string reason
+
+# The captured still image.
+sensor_msgs/CompressedImage still
